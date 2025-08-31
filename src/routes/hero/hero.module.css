@@ -52,8 +52,6 @@
     opacity: 0.9;
 }
 
-/*  */
-
 @keyframes fadeUp {
     0% {
         opacity: 0;
@@ -63,5 +61,25 @@
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 786px) {
+    .img {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .desc {
+        font-size: 1rem;
+    }
+
+    .ctaBtn {
+        font-size: 0.8rem;
     }
 }
