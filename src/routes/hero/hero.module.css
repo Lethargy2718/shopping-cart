@@ -1,0 +1,67 @@
+.hero {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cta {
+    flex: 1;
+    opacity: 0;
+    animation: fadeUp 1.5s ease forwards;
+}
+
+.img {
+    flex: 1;
+    opacity: 0;
+    animation: fadeUp 1.5s ease forwards;
+}
+
+.title {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.desc {
+    font-size: 1.3rem;
+}
+
+.ctaBtn {
+    display: inline-block;
+    font-weight: 900;
+    padding: 0.3rem 2rem;
+    border: 1px solid black;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background: black;
+    color: white;
+    margin-top: 1em;
+}
+
+.ctaBtn:hover {
+    background: black;
+    border-color: black;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.ctaBtn:active {
+    transform: scale(0.97);
+    opacity: 0.9;
+}
+
+/*  */
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
