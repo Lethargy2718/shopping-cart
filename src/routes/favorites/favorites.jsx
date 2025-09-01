@@ -2,6 +2,7 @@ import { Card } from "../../components/Card";
 import Message from "../../components/Message/Message";
 import ProductList from "../../components/ProductList/ProductList";
 import { useOutletContext } from "react-router-dom";
+import { CardContext } from "../../contexts/CardContext";
 
 export default function Favorites() {
     const { data, favorites } = useOutletContext();
@@ -16,6 +17,8 @@ export default function Favorites() {
     }, {});
 
     return (
-        <ProductList productMap={productMap} CardType={Card} />
+        <CardContext value={Card}>
+            <ProductList productMap={productMap} />
+        </CardContext>
     )
 }

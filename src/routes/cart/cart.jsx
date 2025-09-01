@@ -1,7 +1,8 @@
 import { useOutletContext } from "react-router-dom";
 import Message from "../../components/Message/Message"
 import ProductList from "../../components/ProductList/ProductList";
-import { CartCard } from "../../components/Card";
+import { CartCard } from "../../components/Card"
+import { CardContext } from "../../contexts/CardContext"
 
 export default function Cart() {
     const { data, cart } = useOutletContext();
@@ -16,6 +17,8 @@ export default function Cart() {
     }, {});
 
     return (
-        <ProductList productMap={productMap} CardType={CartCard} />
+        <CardContext value={CartCard}>
+            <ProductList productMap={productMap} />
+        </CardContext>
     )
 }

@@ -2,6 +2,7 @@ import { Card } from "../../components/Card";
 import Message from "../../components/Message/Message";
 import ProductList from "../../components/ProductList/ProductList";
 import { useOutletContext } from "react-router-dom";
+import { CardContext } from "../../contexts/CardContext";
 
 export default function Shop() {
     const { data } = useOutletContext();
@@ -14,7 +15,9 @@ export default function Shop() {
     }, {});
 
     return (
-        <ProductList productMap={productMap} CardType={Card} />
+        <CardContext value={Card}>
+            <ProductList productMap={productMap} />
+        </CardContext>
     )
 }
 
